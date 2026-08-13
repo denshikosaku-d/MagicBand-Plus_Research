@@ -39,3 +39,4 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 `83 01 *C3* 0A 01 00 1F 0B 03 08 3A 60 BC 25`<br>
 `83 01 *CC* 03 00 00 00`<br>
 `83 01 <span style="color:blue;">E1</span> 00 *E9* 05 00 01 0E FD B0`<br>
+$\color{red}{赤字}$
