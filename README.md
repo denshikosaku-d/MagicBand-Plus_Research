@@ -35,14 +35,14 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 
 ## 例 / Example
 
-*Ex1 `83 01 E9 04 00 20 0F 00`<br>
+**Ex1** `83 01 E9 04 00 20 0F 00`<br/>
 - Company ID : `83 01`
 - Data
   -  Command ID : `E9`
   -  Packet size : `04`
-  -  Data : `00 20 0F 00`<br/>
+  -  Data : `00 20 0F 00`<br/><br/>
   
-*Ex2 `83 01 E1 00 E9 05 00 01 0E FD B0`<br>
+**Ex2** `83 01 E1 00 E9 05 00 01 0E FD B0`<br/>
 - Company ID : `83 01`
 - Data1
   -  Command ID : `E1`
@@ -52,13 +52,21 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
   -  Command ID : `E9`
   -  Packet size : `05`
   -  Data : `00 01 0E FD B0`
-<br>
+<br/>
 
 
 # コマンド一覧 / Command List
 
 ## 0xE9 - LED & Vibration Effect
 ## 0xCC - Ping?
+このコマンドを受信することでMagicBand+からC0コマンドを含むデータが発信されます。
+ある種のPingコマンドなのではないかと言われていますが、具体的な用途は不明です。
+またこのコマンドを受信したバンドは、コマンド全般の受信感度や精度が向上するような印象があります。
+
+**Example** `83 01 CC 03 00 00 00`
+パークで多く観測されているらしいデータです。
+このデータを受信したバンドからは約15分間C0コマンドを含むビーコンが発信されます。
+
 ## 0xC0 - Ping Response
 ## 0xC3 - Interactive
 ## 0xC4 - Interactive Response
