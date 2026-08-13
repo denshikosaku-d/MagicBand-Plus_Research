@@ -1,17 +1,22 @@
 # MagicBand+ Research
-This is unofficial hobby project.<br><br>
-アメリカのディズニーパークで導入されているMagicBand+、および一部のディズニークルーズで導入されているDisneyBandの動作に関して調べるためのリポジトリです。
+This is an unofficial hobby project.<br><br>
+アメリカのディズニーパークで導入されているMagicBand+、および一部のディズニークルーズで導入されているDisneyBandの動作に関して調べるためのリポジトリです。<br/>
+This repository is dedicated to investigating the operation of MagicBand+ (used at Disney parks in the US) and DisneyBand (used on select Disney Cruise Line ships).
 
 # Beacon Data Format for MagicBand+
 MagicBand+は、パーク内のショーやアトラクション、銅像やクリスマスツリーなどのフォトロケーションに反応して光ったり振動したりします。
-この効果は、パークに設置されているBluetoothビーコンから制御データが発信され、バンドがそれを受信（場合により応答）することで実現しています。<br/><br/>
+この効果は、パークに設置されているBluetoothビーコンから制御データが発信され、バンドがそれを受信（場合により応答）することで実現しています。<br/>
+MagicBand+ lights up and vibrates in response to elements within the park, such as shows, attractions, and photo locations (e.g., statues or Christmas trees). These effects are achieved when Bluetooth beacons installed throughout the park transmit control data, which the band receives (and occasionally responds to).<br/><br/>
 
 ビーコンの中身はBluetoothのアドバタイジングデータであり、制御データはManufacturerDataとして格納・送信されます。
-ここに格納されるデータによって、LEDを特定の色・パターンで光らせたり、振動モーターをリズミカルに駆動したりすることができます。<br/><br/>
+ここに格納されるデータによって、LEDを特定の色・パターンで光らせたり、振動モーターをリズミカルに駆動したりすることができます。<br/>
+The beacon content consists of Bluetooth advertising data, with control data stored and transmitted as "ManufacturerData." The data contained here allows the band to illuminate its LEDs in specific colors or patterns and activate its vibration motor rhythmically.<br/><br/>
 
 データ形式についてはまだまだ謎が多いですが、実際にパークでデータ収集した方などの投稿から少しずつ構造が分かってきています。
 その情報を元に私自信でも調べてみました。<br/>
-以下、現時点でわかっていることをまとめていきます。<br/><br/>
+以下、現時点でわかっていることをまとめていきます。<br/>
+While much about the data format remains a mystery, the structure is gradually being revealed through posts by individuals who have collected data in the parks. I have also conducted my own investigations based on this information.
+The following is a summary of what is currently known.<br/><br/>
 
 # データ形式 / Data Format
 
