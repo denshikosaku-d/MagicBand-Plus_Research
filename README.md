@@ -2,11 +2,6 @@
 This is unofficial hobby project.<br><br>
 アメリカのディズニーパークで導入されているMagicBand+、および一部のディズニークルーズで導入されているDisneyBandの動作に関して調べるためのリポジトリです。
 
-# MagicBand+の動作の仕組み / How MagicBands Work in the parks
-
-## Shows / Attractions
-## Statues and Others
-
 # Beacon Data Format for MagicBand+
 MagicBand+は、パーク内のショーやアトラクション、銅像やクリスマスツリーなどのフォトロケーションに反応して光ったり振動したりします。
 この効果は、パークに設置されているBluetoothビーコンから制御データが発信され、バンドがそれを受信（場合により応答）することで実現しています。<br/><br/>
@@ -61,18 +56,40 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 # コマンド一覧 / Command List
 
 ## Shows / Attractions
+MagicBand+はパークのショーやアトラクションに合わせて光ったり振動したりします。<br/>
+これは設置されている送信機からコマンドを送ることで実現しています。すなわち一対多の一方向通信です。
+
 ### 0xE9 - LED & Vibration Effect
 
 ## Interactive
+WDW内ではキャラクターの銅像が設置されており、そこに近づくとMagicBand+が反応、手を振るなどの行動を起こすとセリフや音楽が流れる、という演出があります。<br/>
+他にも、Disney Springsのクリスマスツリーといったデコレーションにも同じ機能があったりします。<br/><br/>
+
+このとき、銅像やデコレーションからは常にビーコンデータが発信され、それを受信したMagicBand+が反応し、動作の検知を開始します。<br/>
+手を振るなどの動作が検知されると、今度はMagicBand+からもデータが送信され、それを銅像などが受信することで演出がトリガーされます。<br/><br/>
+
+以下は、このインタラクティブ体験に使われるコマンドです。<br/>
+
 ### 0xC3 - Interactive
-パーク内の銅像に近づくとMagicBand+が反応し、装着者が手を振ったりすると、銅像からセリフが流れる、というインタラクティブ演出があります。<br/>
-他にもDisney Springsのクリスマスツリーなどでも似た演出があるようですが、それらに使われていると思われるコマンドです。<br/>
-このコマンドは、銅像やオブジェなどから不特定多数に送信されるものです。
+このコマンドは銅像やオブジェなどから不特定多数に送信され、MagicBand+のインタラクティブ機能を立ち上げるものです。<br/>
+
+**Ex** 
+`83 01 C3 0A 01 00 1F 0B 03 08 3A 60 BC 25`
+- Company ID : `83 01`
+- Command
+  -  Command No : `C3`
+  -  Packet size : `0A`
+  -  Data
+    - `0100`  : Unknown
+    - `1F`    : Random
+    - `0B`    : Unknown
+    - `03`    : Lighting Pattern 1
+    - `08`    : Lighting Pattern 2
+    - `3A`    : Vibration Pattern 1(Higher 4bits) & 2(Lower 4bits)
+    - `60BC25`: Unknown
+<br/>
 
 ### 0xC4 - Interactive Response
-上記と同じインタラクティブ体験用のコマンドです。
-銅像などから発信されたC3コマンドのデータを受信すると、「インタラクティブ体験が近くにありますよ」と装着者に知らせ、同時に動作の検知を開始します。
-MagicBand+に内蔵されているセンサーで腕を振るなどの動作が検知されると、「応えた人がいるよ」という応答としてこのC4コマンドがバンドから送信されます。
 
 ## Park Utilities
 ### 0xCC - Ping?
