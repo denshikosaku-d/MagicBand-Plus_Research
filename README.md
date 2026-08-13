@@ -20,13 +20,20 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 Company ID (2bytes)
 Command1 (1byte)
 Packet1 Size (1byte)
-Packet1 Data (1~n bytes)
+Packet1 Data (1-n bytes)
 Command2 (1byte)
 Packet2 Size (1byte)
-Packet2 Data (1~n bytes)
+Packet2 Data (1-n bytes)
 ...
 
-| TH | TH |
-| ---- | ---- |
-| TD | TD |
-| TD | TD |
+| Type | size | note |
+| ---- | ---- | ---- |
+| Company ID  | 2bytes  |          |
+| Command     | 1byte   |          |
+| Packet Size | 1byte   |          |
+| Packet Data | n bytes | Size must be same as 'Packet Size' |
+| Command2    | 1byte   | If needed |
+| Packet2 Size| 1byte   | If needed |
+| Packet2 Data| n bytes | If needed |
+| ...         |         |          |
+
