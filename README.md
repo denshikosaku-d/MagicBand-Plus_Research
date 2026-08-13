@@ -1,6 +1,6 @@
 # MagicBand+ Research
 This is an unofficial hobby project.<br>
-Translated from Japanese to English with Google Translate or deepL.Translation may be wrong.<br><br>
+Translated from Japanese to English with Google Translate or deepL.　Translations may contain errors.<br><br>
 アメリカのディズニーパークで導入されているMagicBand+、および一部のディズニークルーズで導入されているDisneyBandの動作に関して調べるためのリポジトリです。<br/>
 This repository is dedicated to investigating the operation of MagicBand+ (used at Disney parks in the US) and DisneyBand (used on select Disney Cruise Line ships).
 
