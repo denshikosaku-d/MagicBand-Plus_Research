@@ -22,10 +22,10 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 | ---- | ---- | ----  | ---- |
 | Company ID  | 2bytes  | 0x8301 |          |
 | Command     | 1byte   |  |          |
-| Packet Size | 1byte   | 0 ~ |          |
-| Packet Data | 0 or n bytes |  | Size must be same as 'Packet Size' |
-| Command2    | 1byte   |  | If needed |
-| Packet2 Size| 1byte   | 0 ~ | If needed |
-| Packet2 Data| 0 or n bytes |  | If needed |
+| Packet Size | 1byte   | 0~ |          |
+| Packet Data | 0~n bytes |  | Size must be same as 'Packet Size' |
+| Command2    | 1byte   |  | Option |
+| Packet2 Size| 1byte   | 0~ | Option |
+| Packet2 Data| 0~n bytes |  | Option / Size must be same as 'Packet Size'|
 | ...         |         |  |          |
 
