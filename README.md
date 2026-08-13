@@ -24,7 +24,7 @@ The following is a summary of what is currently known.<br/><br/>
 ## プロトコル / Protocol
 | Type | size | value | note |
 | ---- | ---- | ----  | ---- |
-| Company ID  | 2bytes  | 0x8301 |          |
+| Company ID  | 2bytes  | 0x8301 | ID for Walt Disney    |
 | Command     | 1byte   |  |          |
 | Packet Size | 1byte   | 0~ |          |
 | Packet Data | 0~n bytes |  | Size must be same as 'Packet Size' |
