@@ -18,6 +18,7 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 
 # データ形式 / Data Format
 
+## プロトコル / Protocol
 | Type | size | value | note |
 | ---- | ---- | ----  | ---- |
 | Company ID  | 2bytes  | 0x8301 |          |
@@ -32,16 +33,16 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 基本構成としては、Disney社のCompanyIDから始まり、その後コマンド、パケットサイズ、そしてパケット本体と続きます。
 またアドバタイズデータとして収まる範囲であれば、同じ形式でさらにコマンドを増やすこともできます。
 
-## Example1
-`83 01 E9 04 00 20 0F 00`<br>
+## 例 / Example
+
+*Ex1 `83 01 E9 04 00 20 0F 00`<br>
 - Company ID : `83 01`
 - Data
   -  Command ID : `E9`
   -  Packet size : `04`
   -  Data : `00 20 0F 00`<br/>
-
-## Example2
-`83 01 E1 00 E9 05 00 01 0E FD B0`<br>
+  
+*Ex2 `83 01 E1 00 E9 05 00 01 0E FD B0`<br>
 - Company ID : `83 01`
 - Data1
   -  Command ID : `E1`
@@ -53,3 +54,12 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
   -  Data : `00 01 0E FD B0`
 <br>
 
+
+# コマンド一覧 / Command List
+
+## 0xE9 - LED & Vibration Effect
+## 0xCC - Ping?
+## 0xC0 - Ping Response
+## 0xC3 - Interactive
+## 0xC4 - Interactive Response
+## 0x0F - Unknown (General Purpose?)
