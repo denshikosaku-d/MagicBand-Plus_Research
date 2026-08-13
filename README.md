@@ -38,15 +38,15 @@ MagicBand+は、パーク内のショーやアトラクション、銅像やク�
 - Data
   -  Command ID : `E9`
   -  Packet size : `04`
-  -  Data : `00 20 0F 00`
-<br>
-`83 01 C3 0A 01 00 1F 0B 03 08 3A 60 BC 25`<br>
+  -  Data : `00 20 0F 00`<br/>
+
+`83 01 C3 0A 01 00 1F 0B 03 08 3A 60 BC 25`<br/>
 - Company ID : `83 01`
 - Data
   -  Command ID : `E9`
   -  Packet size : `04`
-  -  Data : `00 20 0F 00`
-<br>
+  -  Data : `00 20 0F 00`<br/>
+
 `83 01 E1 00 E9 05 00 01 0E FD B0`<br>
 - Company ID : `83 01`
 - Data1
