@@ -124,5 +124,5 @@ WDW内ではキャラクターの銅像が設置されており、そこに近�
 
 
 # 参考資料 / References
-https://emcot.world/Disney_MagicBand%2B_Bluetooth_Codes
-https://github.com/jjdb210/Diz_BLE/tree/main
+https://emcot.world/Disney_MagicBand%2B_Bluetooth_Codes <br/>
+https://github.com/jjdb210/Diz_BLE/tree/main <br/>
