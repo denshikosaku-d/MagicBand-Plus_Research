@@ -13,8 +13,8 @@ MagicBand+ lights up and vibrates in response to elements within the park, such 
 ここに格納されるデータによって、LEDを特定の色・パターンで光らせたり、振動モーターをリズミカルに駆動したりすることができます。<br/>
 The beacon content consists of Bluetooth advertising data, with control data stored and transmitted as "ManufacturerData." The data contained here allows the band to illuminate its LEDs in specific colors or patterns and activate its vibration motor rhythmically.<br/><br/>
 
-データ形式についてはまだまだ謎が多いですが、実際にパークでデータ収集した方などの投稿から少しずつ構造が分かってきています。
-その情報を元に私自信でも調べてみました。<br/>
+データ形式についてはまだまだ謎が多いですが、[EMCOT](https://emcot.world/Disney_MagicBand%2B_Bluetooth_Codes)のサイトや[jjdb210](https://github.com/jjdb210/Diz_BLE/tree/main)さんがパークで調べたデータなどから少しずつ構造が分かってきています。
+それらの情報を元に私自信でも調べてみました。<br/>
 以下、現時点でわかっていることをまとめていきます。<br/>
 While much about the data format remains a mystery, the structure is gradually being revealed through posts by individuals who have collected data in the parks. I have also conducted my own investigations based on this information.
 The following is a summary of what is currently known.<br/><br/>
@@ -66,8 +66,18 @@ MagicBand+はパークのショーやアトラクションに合わせて光っ�
 これは設置されている送信機からコマンドを送ることで実現しています。すなわち一対多の一方向通信です。
 
 ### 0xE1~0xE3 - Sequence No.
+E9コマンドと同じパケット内、E9コマンドの前に配置されるコマンドです。
+常にパケット数は0のようです。<br/><br/>
+
+用途としては、新しいE9コマンドを送る度にE1-E3を切り替えることで、MagicBand+がコマンドの更新を判別して適切に反応できるようにするためのものと思われます。<br/>
+E9コマンドのみでも反応はしますが、このコマンドを使うことで反応の精度が良くなる気がします。
+（あくまで実際の挙動からの推測です）
 
 ### 0xE9 - LED & Vibration Effect
+LEDやバイブレーションの演出をするためのコマンドです。<br/>
+ショーやアトラクションなど幅広い場所で使われています。<br/><br/>
+
+必要な点滅パターンに応じてパラメーターを追加していく形で、パケット数は可変です。
 
 ## Interactive
 WDW内ではキャラクターの銅像が設置されており、そこに近づくとMagicBand+が反応、手を振るなどの行動を起こすとセリフや音楽が流れる、という演出があります。<br/>
