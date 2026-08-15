@@ -98,13 +98,13 @@ WDW内ではキャラクターの銅像が設置されており、そこに近�
   -  Command No : `C3`
   -  Packet size : `0A`
   -  Data
-    - `0100`  : Unknown
-    - `1F`    : Random
-    - `0B`    : Unknown
-    - `03`    : Lighting Pattern 1
-    - `08`    : Lighting Pattern 2
-    - `3A`    : Vibration Pattern 1(Higher 4bits) & 2(Lower 4bits)
-    - `60BC25`: Unknown
+      - `0100`  : Unknown
+      - `1F`    : Random
+      - `0B`    : Unknown
+      - `03`    : Lighting Pattern 1
+      - `08`    : Lighting Pattern 2
+      - `3A`    : Vibration Pattern 1(Higher 4bits) & 2(Lower 4bits)
+      - `60BC25`: Unknown
 <br/>
 
 ### 0xC4 - Interactive Response
