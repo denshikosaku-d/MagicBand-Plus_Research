@@ -65,6 +65,8 @@ The following is a summary of what is currently known.<br/><br/>
 MagicBand+はパークのショーやアトラクションに合わせて光ったり振動したりします。<br/>
 これは設置されている送信機からコマンドを送ることで実現しています。すなわち一対多の一方向通信です。
 
+### 0xE1~0xE3 - Sequence No.
+
 ### 0xE9 - LED & Vibration Effect
 
 ## Interactive
@@ -116,11 +118,24 @@ WDW内ではキャラクターの銅像が設置されており、そこに近�
 ### 0x0F - (General Purpose?)
 ### 0x10
 ### 0xC1
+**Example** `83 01 C1 0B 01 00 00 00 00 0B 53 CF F4 01 34`
 ### 0xC7
 ### 0xC8
 ### 0xCB
+**Example** `83 01 CB 03 02 00 20 CC 03 40 31 00` (Includes CC Command)
 ### 0xCF
+**Example** `83 01 CF 0B 00 C4 20 22 2B 59 8F 74 02 EF 17`
+### 0xE4
+**Example** `83 01 E4 09 FF 00 00 00 5C 00 00 00 AB`
+### 0xE5
+**Example** `83 01 E5 01 AB C3 0A 01 00 0C 0B 03 08 3A 60 BA 25` (Includes C3 Command)
 ### 0xE6
+**Example** `83 01 E6 0E 01 00 00 00 00 00 00 00 00 00 00 01 02 A6`
+### 0xEA
+**Example** `83 01 EA 14 01 00 81 0F 58 5C 58 F4 48 82 D0 65 29 D1 46 02 08 30 7B 40`
+### 0xEF
+**Example** `83 01 EF 05 01 A6 00 01 00`
+**Example** `83 01 EF 08 01 A6 20 05 00 00 9D 00`
 
 
 # 参考資料 / References
