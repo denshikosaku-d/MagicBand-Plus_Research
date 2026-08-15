@@ -109,4 +109,20 @@ WDW内ではキャラクターの銅像が設置されており、そこに近�
 
 ### 0xC0 - Ping Response
 
-### 0x0F - Unknown (General Purpose?)
+## Purpose Unknown
+### 0x03
+### 0x05
+### 0x0A
+### 0x0F - (General Purpose?)
+### 0x10
+### 0xC1
+### 0xC7
+### 0xC8
+### 0xCB
+### 0xCF
+### 0xE6
+
+
+# 参考資料 / References
+https://emcot.world/Disney_MagicBand%2B_Bluetooth_Codes
+https://github.com/jjdb210/Diz_BLE/tree/main
