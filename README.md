@@ -122,8 +122,12 @@ WDW内ではキャラクターの銅像が設置されており、そこに近�
 ### 0xC0 - Ping Response
 
 ## Purpose Unknown
+### 0x01
+**Example** `83 01 01 06 00 07 01 37 09 A6`
 ### 0x03
+**Example** `83 01 03 04 44 81 82 0D`
 ### 0x05
+**Example** `83 01 05 0B 01 0C 04 00 00 00 00 00 00 00 00`
 ### 0x0A
 ### 0x0F - (General Purpose?)
 ### 0x10
