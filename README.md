@@ -79,6 +79,24 @@ LEDやバイブレーションの演出をするためのコマンドです。<b
 
 必要な点滅パターンに応じてパラメーターを追加していく形で、パケット数は可変です。
 
+```
+- Command No : E9
+- Packet size
+- Data
+  -  Unknown : `00`
+  -  Duration/Fadeout
+  -  Data : none
+```
+
+| Type | size | value | note |
+| ---- | ---- | ----  | ---- |
+| Command     | 1byte   | 0xE9 |          |
+| Packet Size | 1byte   | 0~ |          |
+| Unknown | 1byte |  | Basically `00` |
+| Duration | 1byte |  |  |
+| Other Parameters | n bytes |  |  |
+
+
 ## Interactive
 WDW内ではキャラクターの銅像が設置されており、そこに近づくとMagicBand+が反応、手を振るなどの行動を起こすとセリフや音楽が流れる、という演出があります。<br/>
 他にも、Disney Springsのクリスマスツリーといったデコレーションにも同じ機能があったりします。<br/><br/>
