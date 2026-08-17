@@ -80,21 +80,17 @@ LEDやバイブレーションの演出をするためのコマンドです。<b
 必要な点滅パターンに応じてパラメーターを追加していく形で、パケット数は可変です。
 
 ```
-- Command No : E9
-- Packet size
-- Data
-  -  Unknown : `00`
-  -  Duration/Fadeout
-  -  Data : none
+* Command No  : 0xE9
+* Packet size : 0~
+* Packet Data
+  ・Unknown          : (0x00)
+  ・Duration/Fadeout
+    - 7-6bit : Duration scale?
+    - 5-4bit : Fadeout Setting
+    - 3-0bit : Duration
+  ・Data
 ```
 
-| Type | size | value | note |
-| ---- | ---- | ----  | ---- |
-| Command     | 1byte   | 0xE9 |          |
-| Packet Size | 1byte   | 0~ |          |
-| Unknown | 1byte |  | Basically `00` |
-| Duration | 1byte |  |  |
-| Other Parameters | n bytes |  |  |
 
 
 ## Interactive
