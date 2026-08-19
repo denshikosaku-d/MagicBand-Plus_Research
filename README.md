@@ -83,15 +83,25 @@ LEDやバイブレーションの演出をするためのコマンドです。<b
 * Command No  : 0xE9
 * Packet size : 0~
 * Packet Data
-  ・Unknown          : (0x00)
-  ・Duration/Fadeout
+  ・Unknown(1byte / 0x00)
+  ・Duration/Fadeout(1byte)
     - 7-6bit : Duration scale?
     - 5-4bit : Fadeout Setting
     - 3-0bit : Duration
   ・Data
 ```
 
-
+#### LED & Vibration Pattern Command
+##### 0x0E - Color with Mask
+##### 0x0F - Multi Color
+##### 0xBx - Vibration
+##### 0x30 - Step Circle
+- 7B
+##### 0x488D - 2 Color Shuffle
+- D2
+##### 0x48AE - Rainbow
+##### 0x48A2 - Fade Flash
+##### 0x48A5 - Circle Flash
 
 ## Interactive
 WDW内ではキャラクターの銅像が設置されており、そこに近づくとMagicBand+が反応、手を振るなどの行動を起こすとセリフや音楽が流れる、という演出があります。<br/>
