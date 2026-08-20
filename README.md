@@ -163,6 +163,8 @@ WDW内ではキャラクターの銅像が設置されており、そこに近�
 **Examples** `83 01 C8 01 B2`
 ### 0xCB
 **Example** `83 01 CB 03 02 00 20 CC 03 40 31 00` (Includes CC Command)
+### 0xCD
+**Example** `83 01 E1 00 CD 07 0E 07 1C 08 00 00 00` (Includes E1 Command)
 ### 0xCF
 **Example** `83 01 CF 0B 00 C4 20 22 2B 59 8F 74 02 EF 17`
 ### 0xE4
